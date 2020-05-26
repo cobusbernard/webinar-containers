@@ -24,7 +24,7 @@ phases:
       - echo Writing image definitions file for later deployment...
       - printf '[{"name":"nginx","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
       - cat imagedefinitions.json
-      - printf '{"AWSEBDockerrunVersion": "1","Image": {"Name": "%s","Update": "true"},"Ports":[ {"ContainerPort" : 80 }]}'$REPOSITORY_URI:$IMAGE_TAG > Dockerrun.aws.json
+      - printf '{"AWSEBDockerrunVersion":"1","Image":{"Name":"%s","Update":"true"},"Ports":[{"ContainerPort":80}]}' $REPOSITORY_URI:$IMAGE_TAG > Dockerrun.aws.json
       - cat Dockerrun.aws.json
     
 artifacts:
