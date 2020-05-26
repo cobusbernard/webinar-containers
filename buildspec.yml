@@ -28,4 +28,6 @@ phases:
       - cat Dockerrun.aws.json
     
 artifacts:
-  files: imagedefinitions.json
+  files: 
+   - imagedefinitions.json
+   - Dockerrun.aws.json
